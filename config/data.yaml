@@ -1,0 +1,8 @@
+# Whether in debug mode
+debug : True
+
+# File
+data_dir : ../data
+
+# debug configuration
+num_sample: 10

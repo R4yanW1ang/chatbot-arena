@@ -1,0 +1,31 @@
+dataset:
+  data_dir: ../data
+  n_splits: 5
+  fold_idx: 0
+
+model:
+#  checkpoint: "unsloth/gemma-2-9b-it-bnb-4bit"
+  checkpoint: ../gemma-2-9b-it-4bit
+  max_length: 1024
+
+training:
+  n_splits: 5
+  optim_type: "adamw_8bit"
+  per_device_train_batch_size: 2
+  gradient_accumulation_steps: 2  # global batch size is 8
+  per_device_eval_batch_size: 8
+  n_epochs: 1
+  freeze_layers: 16  # there are 42 layers in total, we don't add adapters to the first 16 layers
+  lr: 1e-5
+  warmup_steps: 20
+
+lora:
+  lora_r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  lora_bias: "none"
+
+inference:
+  batch_size: 4
+  max_length: 1024
+  model_output_dir: model_output
