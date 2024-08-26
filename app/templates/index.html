@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Comparison</title>
+</head>
+<body>
+    <h1>Model Preference Inference</h1>
+    <form method="POST">
+        <label for="prompt">Prompt:</label><br>
+        <textarea id="prompt" name="prompt" rows="4" cols="50">{{ prompt }}</textarea><br><br>
+
+        <label for="response_a">Response A:</label><br>
+        <textarea id="response_a" name="response_a" rows="4" cols="50">{{ response_a }}</textarea><br><br>
+
+        <label for="response_b">Response B:</label><br>
+        <textarea id="response_b" name="response_b" rows="4" cols="50">{{ response_b }}</textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if result %}
+        <h2>Result: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
