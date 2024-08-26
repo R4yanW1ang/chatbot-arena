@@ -5,7 +5,6 @@ The app returns human preferance on these two responses (a tie is also possible)
 
 base_model: unsloth/gemma-2-9b-it-bnb-4bit
 library_name: transformers, peft
----
 
 ## How to Get Started with the Model
 
