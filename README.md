@@ -1,7 +1,8 @@
 # chatbot-arena
-Deployed LLM that accepts prompt (a question) + responses from two Large language models, and returns human preferance on these two responses (a tie is also possible).
+Deployed LLM that accepts prompt (a question) + responses from two Large language models. 
+The app returns human preferance on these two responses (a tie is also possible).
 
----
+
 base_model: unsloth/gemma-2-9b-it-bnb-4bit
 library_name: transformers, peft
 ---
